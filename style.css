@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+:root {
+	--myred: #86C6F4;
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	font-family: "Montserrat";
+	background-color: #86C6F4;
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+}
+.col-container {
+	display: flex;
+	width: 100%;
+	padding: 20px;
+}
+.wrap {
+	display: flex;
+	width: 100%;
+	box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+.col1 {
+	flex: 1;
+	padding: 5px;
+}
+.col2 {
+	flex: 2;
+	padding: 5px;
+}
+.leftcont {
+	background-color: #398AB9;
+	text-align: center;
+	color: white;
+	padding: 20px;
+	padding-bottom: 40px;
+}
+.rightcont {
+	background-color: white;
+	padding: 20px;
+	text-align: center;
+	color: gray;
+}
+h1.big {
+	text-align: center;
+	color: white;
+	font-size: 10em;
+}
+h1#cyear {
+	text-align: right;
+}
+h2 {
+	margin-bottom: 1em;
+	text-transform: uppercase;
+}
+ul {
+	list-style-type: none;
+}
+.weekdays {
+	display: flex;
+	padding: 10px 0;
+	background-color: #f0f0f0;
+}
+.weekdays li {
+	display: inline-block;
+	flex: 1;
+	border-right: 1px solid white;
+}
+.days {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	place-items: center;
+}
+.days li {
+	display: inline-block;
+	padding: 20px 20px;
+}
+.days li:hover {
+	background-color: silver;
+	color: white;
+	cursor: pointer;
+}
+.days li.active {
+	background-color: var(--myred);
+	color: white;
+}
+.days li:nth-child(1),
+.days li:nth-child(2),
+.days li:nth-child(31),
+.days li:nth-child(32),
+.days li:nth-child(33),
+.days li:nth-child(34),
+.days li:nth-child(35) {
+	background-color: initial;
+	color: silver;
+}
+@media only screen and (max-width: 768px) {
+	.col-container,
+	.wrap {
+		display: block;
+		width: 100%;
+	}
+	.days li {
+		padding: 20px 10px;
+	}
+}
+
+.leye {
+	position: absolute;
+	left: 20%;
+	top: 30%;
+	background-color: black;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+}
+.reye {
+	position: absolute;
+	right: 20%;
+	top: 30%;
+	background-color: black;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+}
+.myanim {
+	animation: myanimmov 5s linear infinite;
+}
+@keyframes myanimmov {
+	0% {
+		bottom: -10%;
+	}
+	10% {
+		bottom: -10%;
+	}
+	30% {
+		bottom: -4%;
+	}
+	80% {
+		bottom: -4%;
+	}
+	90% {
+		bottom: -10%;
+	}
+	100% {
+		bottom: -10%;
+	}
+}
